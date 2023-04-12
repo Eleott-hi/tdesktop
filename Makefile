@@ -18,8 +18,8 @@ OS           	:= $(shell uname -s)
 FILES        	:= $(shell find . \( -name "*.cc" -o -name "*.h" \) -type f)
 
 # BUILD_TYPE   	:= Debug
-BUILD_DIR     	:= ../build
-INSTALL_DIR   	:= ../install
+BUILD_DIR     	:= build
+INSTALL_DIR   	:= install
 
 TEST_DIR 	  	:= tests
 TEST_BUILD_DIR	:= ../build-test
@@ -44,7 +44,7 @@ OPEN	     	:= ./
 # time    			run time analysis
 # tests    			run tests
 
-all: app
+all: build
 
 app: build
 	$(OPEN)$(BUILD_DIR)/$(APP) 1 ../datasets/HIV-1_AF033819.3.txt ../datasets/RabinKarp.txt
